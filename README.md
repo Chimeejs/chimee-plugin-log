@@ -69,9 +69,9 @@ const chimee = new Chimee({
     // 告诉插件你有一个可以接受日志上报的服务端接口
     logPostUrl: 'https://myDomain.xx/log_push',
     events: {
-    	play: () => {
-    		this.sendLog('日志名称', { src: this.src, 'myData': '想要上报的数据' });
-    	}
+      play: () => {
+        this.sendLog('日志名称', { src: this.src, 'myData': '想要上报的数据' });
+      }
     }
   }]
 });
@@ -88,20 +88,20 @@ const chimee = new Chimee({
     // 告诉插件你有一个可以接受日志上报的服务端接口
     logPostUrl: 'https://myDomain.xx/log_push',
     methods: {
-    	// 自定义loadstart环节输出日志包含的数据格式
-    	write_loadstart_log: (evt, logData) => {
-    		return Object.assign(logData, {
-    			src: this.src,
-    			'myData': '想要输出的数据'
-    		});
-    	},
-    	// 自定义loadstart环节上报日志包含的数据格式
-    	send_loadstart_log: (evt, logData) => {
-    		return Object.assign(logData, {
-    			src: this.src,
-    			'myData': '想要上报的数据'
-    		});
-    	}
+      // 自定义loadstart环节输出日志包含的数据格式
+      write_loadstart_log: (evt, logData) => {
+        return Object.assign(logData, {
+          src: this.src,
+          'myData': '想要输出的数据'
+        });
+      },
+      // 自定义loadstart环节上报日志包含的数据格式
+      send_loadstart_log: (evt, logData) => {
+        return Object.assign(logData, {
+          src: this.src,
+          'myData': '想要上报的数据'
+        });
+      }
     }
   }]
 });
