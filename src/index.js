@@ -268,5 +268,10 @@ export default popupFactory({
       })(getLocalStorage('_chimee_uid')),
       ref: location.href
     }
+  },
+  computed: {
+    type(){
+      return this.$videoConfig.isLive?'live':'vod';
+    }
   }
 });
