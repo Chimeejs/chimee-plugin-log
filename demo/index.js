@@ -18,3 +18,15 @@ const player = new Chimee({
   autoplay: true,
   controls: true
 });
+
+if(player.chimeeLog){
+  const btnsBoxEl = document.querySelector('#btns');
+  const _opened = ()=>{
+    btnsBoxEl.innerHTML = '<a href="###" onclick="player.chimeeLog.open()">Open the log panel.</a>'
+  };
+  _opened();
+  player.chimeeLog.on('popupClose', _opened);
+  player.chimeeLog.on('popupOpen', ()=>{
+    btnsBoxEl.innerHTML = '<a href="###" onclick="player.chimeeLog.close()">Close the log panel.</a>'
+  });
+}
