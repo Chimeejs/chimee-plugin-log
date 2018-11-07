@@ -1,5 +1,7 @@
 # LogPlugin of Chimee
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Chimeejs/chimee-plugin-log.svg)](https://greenkeeper.io/)
+
 实现日志输出及打点上报逻辑，可用于异常跟踪等。
 本插件继承自[popup插件](https://github.com/Chimeejs/chimee-plugin-popup)实现具备相应功能函数。
 
